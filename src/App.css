@@ -355,6 +355,10 @@ body {
   text-decoration: underline;
 }
 
+.none {
+  display: none;
+}
+
 /* End breadcrumb */
 
 /* container

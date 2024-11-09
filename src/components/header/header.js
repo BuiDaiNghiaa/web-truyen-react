@@ -183,7 +183,7 @@ export const Header = () => {
                         <MdOutlineMenu />
                     </div>
                 </div>
-                <div className="header_menu">
+                <div className="header_menu none">
                         <ul className="menu-drop menu none">
                             <li className="par-menu1 menu-edit mb-30"><TfiMenuAlt /><span>Danh sách<FaSortDown /></span>
                             </li>
