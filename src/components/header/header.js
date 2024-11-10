@@ -14,8 +14,7 @@ export const Header = () => {
             { button: document.querySelector(".par-menu2"), menu: document.querySelector(".par-slide-menu") },
             { button: document.querySelector(".par-menu3"), menu: document.querySelector(".slide-menu3") },
         ];
-        
-        // Hàm đóng tất cả menu
+
         function closeAllMenus() {
             menus.forEach(({ menu }) => menu.classList.remove("active"));
         }
@@ -24,17 +23,15 @@ export const Header = () => {
         menus.forEach(({ button, menu }) => {
             if (button && menu) {
                 button.addEventListener("click", (event) => {
-                    event.stopPropagation();
+                    // event.stopPropagation();
                     // Kiểm tra nếu menu đã mở
                     const isActive = menu.classList.contains("active");
-
+                    closeAllMenus();
                     if (isActive) {
                         // Nếu menu đã mở, đóng nó
                         menu.classList.remove("active");
-                        console.log("active");
                     } else {
                         // Nếu không, đóng tất cả menu trước và mở menu hiện tại
-                        closeAllMenus();
                         menu.classList.add("active");
                     }
                 });
@@ -42,14 +39,24 @@ export const Header = () => {
         });
         
         // Đóng tất cả các menu khi click ra ngoài
-        document.addEventListener("click", closeAllMenus);
+        document.addEventListener("click", (event) => {
+            if (!event.target.closest('.par-menu1') && 
+                !event.target.closest('.par-menu2') && 
+                !event.target.closest('.par-menu3') &&
+                !event.target.closest('.sub-menu')
+            ) {
+                closeAllMenus();
+            }
+        });
 
         // Click icon-menu-dropdown 
         const iconMenuDropdown = document.querySelector(".menu-reponsive");
         if(iconMenuDropdown) {
             const ulDropdown = document.querySelector(".menu-drop");
+            const divDropdown = document.querySelector(".header-menu-drop");
             iconMenuDropdown.addEventListener("click", () => {
                 ulDropdown.classList.toggle("block");
+                divDropdown.classList.toggle("none");
             })
         }
 
@@ -183,7 +190,7 @@ export const Header = () => {
                         <MdOutlineMenu />
                     </div>
                 </div>
-                <div className="header_menu none">
+                <div className="header_menu header-menu-drop none">
                         <ul className="menu-drop menu none">
                             <li className="par-menu1 menu-edit mb-30"><TfiMenuAlt /><span>Danh sách<FaSortDown /></span>
                             </li>

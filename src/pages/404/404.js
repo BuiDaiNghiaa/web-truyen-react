@@ -5,18 +5,18 @@ export const PageNotFound = () => {
         <>
         <div className="body">
             <h1 className="h1">404 Error</h1>
-            <p class="zoom-area">
+            <p className="zoom-area">
                 <b>CSS</b> animations to make a cool 404 page.
             </p>
-            <section class="error-container">
+            <section className="error-container">
                 <span>4</span>
                 <span>
-                    <span class="screen-reader-text">0</span>
+                    <span className="screen-reader-text">0</span>
                 </span>
                 <span>4</span>
             </section>
-            <div class="link-container">
-                <Link class="more-link" to="/">
+            <div className="link-container">
+                <Link className="more-link" to="/">
                     Visit the original article
                 </Link>
             </div>

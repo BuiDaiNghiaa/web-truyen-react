@@ -417,31 +417,31 @@ export const InfoStory = () => {
                         </div>
                         <div className="main-same-author">
                             <div className="box-title1">
-                            <Link><FaAngleRight />
+                            <Link to="story"><FaAngleRight />
                             <span>Khó Chơi-Ngư Sương</span></Link>
                             </div>
                             <div className="box-title2">
-                            <Link><FaAngleRight />
+                            <Link to="story"><FaAngleRight />
                             <span>Ai Cũng Biết Cô Ấy Yêu tôi</span></Link>
                             </div>
                             <div className="box-title3">
-                            <Link><FaAngleRight />
+                            <Link to="story"><FaAngleRight />
                             <span>Tia Sáng</span></Link>
                             </div>
                             <div className="box-title4">
-                            <Link><FaAngleRight />
+                            <Link to="story"><FaAngleRight />
                             <span>Triều Tư Mộ Noãn</span></Link>
                             </div>
                             <div className="box-title5">
-                              <Link><FaAngleRight />
+                              <Link to="story"><FaAngleRight />
                               <span>Âm Dương</span></Link>
                             </div>
                             <div className="box-title6">
-                              <Link ><FaAngleRight />
+                              <Link to="story"><FaAngleRight />
                               <span>Hợp Cửu Bất Phân</span></Link>
                             </div>
                             <div className="box-title7">
-                              <Link  ><FaAngleRight />
+                              <Link to="story"><FaAngleRight />
                               <span>Phân Cửu Tất Hợp</span></Link>
                             </div>
                         </div>
@@ -625,7 +625,7 @@ export const InfoStory = () => {
                     </div>
                 </div>
                 <div className="reply">
-                    <span><a href="#">Thích</a></span><span><a href="#">Phản hồi</a></span><span>3
+                    <span><Link to="/">Thích</Link></span><span><Link to="/">Phản hồi</Link></span><span>3
                         ngày</span>
                 </div>
             </div>

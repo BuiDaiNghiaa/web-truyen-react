@@ -259,9 +259,6 @@ body {
   display: block;
 }
 
-.none {
-  display: none!important;
-}
 
 .header_menu .menu li a {
   text-decoration: none;
