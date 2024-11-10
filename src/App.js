@@ -3,6 +3,7 @@ import { BrowserRouter , Routes, Route } from "react-router-dom";
 import { LayoutDefault } from './layouts/layoutDefault';
 import { InfoStory } from './pages/infoStory/infoStory';
 import { DetailStory } from './pages/detailStory/detailStory';
+import { PageNotFound } from './pages/404/404';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
             <Route path='/' element={<InfoStory/>}/>
             <Route path='/detail' element={<DetailStory/>}/>
           </Route>
+          <Route path='*' element={<PageNotFound/>}/>
         </Routes>
       </BrowserRouter>
     </>
